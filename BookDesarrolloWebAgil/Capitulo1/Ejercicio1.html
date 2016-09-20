@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>{{Respuesta}}</title>
+</head>
+<body>
+	<div class="continer">
+		Entiendes el contenido de este libro.
+		<input type="checkbox" ng-model="respuesta">
+		<div ng-hide="respuesta">
+			<h2>Me esforzare mas</h2>
+		</div>
+		<div ng-show="respuesta">
+			<h2>Felicidades</h2>
+		</div>
+	</div>
+	<script type="text/javascript" src="../angular.min.js"></script>
+</body>
+
+</html>
