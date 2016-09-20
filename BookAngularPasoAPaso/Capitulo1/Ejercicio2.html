@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="es" ng-app>
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title></title>
 </head>
-<body>
+<body ng-app="myApp">
 	<script src="../angular.min.js"></script>
 	<script>
-		function miCtrl ($scope) {
-			$scope.mensaje = 'Mensaje desde el controlador';
-		}
+		angular.module('myApp', [])
+			.controller('miCtrl', function($scope) {
+				$scope.mensaje = 'Mensaje desde el controlador';
+			});
 	</script>
 	<div class="container" ng-controller="miCtrl">
-		<h1>{{ mensaje }}</h1>
+		<h1>{{mensaje}}</h1>
 	</div>
 </body>
 </html>
